@@ -22,11 +22,7 @@
       <div class="l-main__body">
         <header class="l-header"> <!-- flex column center タテ並び真ん中 -->
           <h1 class="l-header__logo"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
-
-          <form action="./archive_search.html" class="c-form p-search"> <!-- flex row ヨコ並び -->
-            <input type="text" placeholder="" class="c-form__text p-search__text">
-            <input type="submit" value="検索" class="c-form__submit p-search__submit">
-          </form>
+          <?php get_search_form(); ?> <!-- searchform.phpを読み込むテンプレートタグ -->
         </header>
 
 
