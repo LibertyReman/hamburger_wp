@@ -1,0 +1,87 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.p-card {
+  @include mixin.dbg-border(blue, 3, 1);
+  margin: 25px 0;
+  color: variable.$color-white;
+
+  @include mixin.breakpoint("tablet") {
+    display: flex;
+  }
+
+  &__img {
+    @include mixin.dbg-border(red, 3, 1);
+    height: 230px;
+    width: 100%;
+    background: no-repeat left/cover url("../../img/card.jpg");
+
+    @include mixin.breakpoint("tablet") {
+      height: auto;
+      width: 50%;
+      background: no-repeat left/cover url("../../img/card-tablet.jpg");
+    }
+
+    @include mixin.breakpoint("wide") {
+      background: no-repeat left/cover url("../../img/card-pc.jpg");
+    }
+  }
+
+  &__content {
+    @include mixin.dbg-border(pink, 5, 1);
+    width: 100%;
+    padding: 32px 4.53vw 43px;
+    background-color: variable.$color-darkorange;
+
+    @include mixin.breakpoint("tablet") {
+      height: auto;
+      width: 50%;
+    }
+
+    &__title {
+      @include mixin.dbg-border(yellow, 3, 1);
+      margin-bottom: 21px;
+      font-size: 20px;
+
+      @include mixin.breakpoint("wide") {
+        margin-bottom: 44px;
+      }
+    }
+
+    &__subtitle {
+      @include mixin.dbg-border(blue, 3, 1);
+      margin-bottom: 7px;
+      font-size: 16px;
+    }
+
+    &__text {
+      @include mixin.dbg-border(red, 3, 1);
+      margin-bottom: 40px;
+      font-weight: normal;
+
+      @include mixin.breakpoint("wide") {
+        margin-bottom: 60px;
+      }
+    }
+
+    &__button {
+      @include mixin.dbg-border(red, 3, 1);
+      height: 43px;
+      width: 43.46vw;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 22px;
+      color: variable.$color-gray;
+
+      @include mixin.breakpoint("tablet") {
+        width: 19.54vw;
+      }
+
+      @include mixin.breakpoint("wide") {
+        width: 15.20vw;
+      }
+    }
+  }
+
+}
+

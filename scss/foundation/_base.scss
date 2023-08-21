@@ -1,0 +1,23 @@
+@use "../foundation/mixin";
+
+body {
+  min-width: 320px; // スマートフォン 最小サイズ
+  font-family: 'Roboto', 'M PLUS 1p', sans-serif;
+  font-weight: bold;
+
+  &.is-open {
+    position: fixed;
+  }
+
+}
+
+a {
+  color: inherit; // 親のスタイルを継承
+  text-decoration: none; // URLリンクの下線を消す
+}
+
+li {
+  list-style: none; // 点(・)を削除
+}
+
+

@@ -1,0 +1,50 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.p-search {
+  @include mixin.dbg-border(lightgreen, 3, 1);
+  display: flex; // インライン要素(input)の余白を削除するために子要素をブロック要素に変換
+  height: 46px;
+
+  @include mixin.breakpoint("wide") {
+    margin-right: 31px;
+  }
+
+  &__text {
+    @include mixin.dbg-border(black, 3, 0);
+    width: 57.6vw;
+    min-width: 200px;
+    max-width: 396px;
+    margin-right: 16px;
+    padding-left: 38px;
+    border: 1px solid variable.$color-gray;
+    border-radius: 10px;
+    background-color: variable.$color-white;
+    background-image: url("../../img/search.png");
+    background-position: 9px center;
+    background-size: 24px, 24px;
+
+    @include mixin.breakpoint("wide") {
+      width: 20.62vw;
+    }
+  }
+
+  &__submit {
+    @include mixin.dbg-border(blue, 3, 0);
+    width: 24vw;
+    min-width: 50px;
+    max-width: 136px;
+    border: 1px solid variable.$color-gray;
+    border-radius: 10px;
+    background-color: variable.$color-brown;
+    color: variable.$color-gray;
+
+    @include mixin.breakpoint("wide") {
+      width: 7.08vw;
+    }
+  }
+
+}
+
+
+

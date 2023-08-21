@@ -1,0 +1,28 @@
+@use "../foundation/mixin";
+@use "../foundation/variable";
+
+.l-main {
+  @include mixin.dbg-border(blue, 3, 1);
+
+  @include mixin.breakpoint("wide") {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__body {
+    width: 100%;
+  }
+
+  &__wrapper {
+    padding: 5.33vw;
+
+    &__flex {
+      display: flex;
+      flex-direction: column; // タテ並び
+
+      @include mixin.breakpoint("tablet") {
+        flex-direction: row; // ヨコ並び
+      }
+    }
+  }
+}

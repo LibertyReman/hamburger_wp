@@ -1,0 +1,80 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.p-content {
+  @include mixin.dbg-border(yellow, 6, 1);
+  display: flex;
+  flex-direction: column; // タテ並び
+  justify-content: space-between; // 両端から均等に配置
+  margin-bottom: 20px;
+  width: 100%;
+
+  @include mixin.breakpoint("tablet") {
+    margin-bottom: 0;
+  }
+
+  &--img-takeout {
+    background: no-repeat center/cover url("../../img/takeout.jpg");
+
+    @include mixin.breakpoint("tablet") {
+      margin-right: 4.79vw;
+    }
+
+  }
+  &--img-eatin {
+    background: no-repeat center/cover url("../../img/eatin.jpg");
+  }
+
+  &__title {
+    @include mixin.dbg-border(lightgreen, 3, 1);
+    padding-top: 13px;
+    padding-left: 16px;
+    color: variable.$color-white;
+    font-size: 41px;
+
+    &::after {
+      @include mixin.dbg-border(lightgreen, 3, 1);
+      display: block; // 擬似要素はインライン要素のためwidth, height指定できるよう変更
+      content: ""; // before, after擬似要素で必須
+      height: 4px;
+      width: 34px;
+      margin-top: 17px;
+      margin-bottom: 216px; // boxが大きくなった際の隙間を確保
+      background-color: variable.$color-white;
+
+      @include mixin.breakpoint("tablet") {
+        margin-top: 25px;
+      }
+
+      @include mixin.breakpoint("wide") {
+        margin-bottom: 663px; // boxが大きくなった際の隙間を確保
+      }
+    }
+  }
+
+  &__boxes {
+    @include mixin.dbg-border(blue, 10, 1);
+  }
+
+  &__box {
+    @include mixin.dbg-border(red, 3, 1);
+    margin: 0 16px 16px;
+    color: variable.$color-black;
+    background-color: variable.$color-white;
+    opacity: 0.8;
+    &__title {
+      @include mixin.dbg-border(blue, 3, 1);
+      padding: 16px 0 8px 16px;
+      font-size: 22px;
+      line-height: 24px;
+    }
+    &__text {
+      @include mixin.dbg-border(black, 3, 1);
+      padding: 0 16px 16px 16px;
+      font-weight: normal;
+    }
+  }
+
+}
+
+

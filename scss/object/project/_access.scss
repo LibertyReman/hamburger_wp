@@ -1,0 +1,74 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.p-access {
+  @include mixin.dbg-border(lightgreen, 3, 1);
+  position: relative;
+  padding: 42px 10.66vw;
+  background: rgba(0, 0, 0, 0.3);
+
+  @include mixin.breakpoint("tablet") {
+    padding: 42px 5.33vw;
+  }
+
+  &__title {
+    @include mixin.dbg-border(lightgreen, 3, 1);
+    color: variable.$color-white;
+    font-size: 30px;
+
+    @include mixin.breakpoint("wide") {
+      width: 36.30vw;
+    }
+
+    &::after {
+      @include mixin.dbg-border(lightgreen, 3, 1);
+      display: block; // 擬似要素はインライン要素のためwidth, height指定できるよう変更
+      content: ""; // before, after擬似要素で必須
+      height: 2px;
+      width: 75px;
+      margin-top: 13px;
+      margin-bottom: 15px;
+      background-color: variable.$color-white;
+    }
+  }
+
+  &__text {
+    @include mixin.dbg-border(lightgreen, 3, 1);
+    color: variable.$color-white;
+    font-size: 14px;
+    line-height: 33px;
+
+    @include mixin.breakpoint("wide") {
+      width: 36.30vw;
+    }
+  }
+
+  &__layer {
+    @include mixin.dbg-border(red, 3, 1);
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    height: 415px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+
+    @include mixin.breakpoint("tablet") {
+      height: 100%;
+    }
+
+    @include mixin.breakpoint("wide") {
+      width: 49.47vw;
+    }
+  }
+
+  &__map {
+    @include mixin.dbg-border(blue, 6, 1);
+    position: absolute;
+    z-index: -200;
+    top: 0;
+    left: 0;
+  }
+
+}
+

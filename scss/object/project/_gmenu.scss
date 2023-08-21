@@ -1,0 +1,153 @@
+@use "sass:math";
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+$menu-width-sp: 87.46%;
+$menu-width-tablet: 44%;
+$clbtn-width: 40px;
+$clbtn-height: 5px;
+
+
+.p-gmenu {
+  @include mixin.dbg-border(red, 5, 1);
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  height: 100%;
+  background-color: variable.$color-lightbrown;
+
+  &__menu-opbtn {
+    @include mixin.dbg-border(green, 3, 1);
+    margin: 8px 2.13vw 11px 0px;
+
+    @include mixin.breakpoint("wide") {
+      display: none;
+    }
+
+    span {
+      @include mixin.dbg-border(black, 1, 1);
+      color: variable.$color-gray;
+      font-size: 20px;
+    }
+  }
+
+  &__layer.is-open {
+    @include mixin.dbg-border(pink, 5, 1);
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    height: 100vh; // 画面いっぱいの高さ指定
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 500ms 0s ease;
+  }
+
+  &__content {
+    @include mixin.dbg-border(red, 3, 1);
+    position: fixed;  // ウィンドウ左上端で固定
+    z-index: 100; // 1番上に表示する
+    left: 100%; // 左端(0)から右にX移動
+    width: $menu-width-sp;
+    height: 100%;
+    background-color: variable.$color-brown;
+    transition: all 500ms 0s ease;
+
+    @include mixin.breakpoint("tablet") {
+      width: $menu-width-tablet;
+    }
+
+    @include mixin.breakpoint("wide") {
+      position: static;
+      width: 19.11vw;
+      min-width: 367px;
+    }
+
+    &.is-open {
+      left: 100% - $menu-width-sp; // 左端(0)から右にX移動 100% -> X%
+      overflow-y: scroll; // height(auto以外)の指定が必要
+
+      @include mixin.breakpoint("tablet") {
+        left: 100% - $menu-width-tablet; // 左端(0)から右にX移動 100% -> X%
+      }
+    }
+
+    &__menu-clbtn {
+      @include mixin.dbg-border(black, 1, 1);
+      display: block; // margin-leftで右端に配置するためにブロック要素へ変更
+      position: relative;
+      width: $clbtn-width;
+      height: $clbtn-width;
+      margin: 8px 8px 134px auto;
+
+      @include mixin.breakpoint("wide") {
+        display: none;
+      }
+
+      &::before,
+      &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        left: calc(50% - math.div($clbtn-width, 2));
+        width: $clbtn-width;
+        height: $clbtn-height;
+        background-color: variable.$color-gray;
+      }
+      &::before {
+        top: 18px;
+        transform: rotate(135deg);
+      }
+      &::after {
+        top: 18px;
+        transform: rotate(-135deg);
+      }
+
+      span {
+        @include mixin.dbg-border(black, 1, 1);
+        font-size: 0px;
+      }
+    }
+
+    &__title {
+      display: none;
+
+      @include mixin.breakpoint("wide") {
+        display: block;
+        margin: 84px 0 90px 46px;
+        color: variable.$color-gray;
+        font-size: 34px;
+      }
+    }
+
+    > ul {
+      @include mixin.dbg-border(black, 4, 0);
+      > li {
+        @include mixin.dbg-border(pink, 2, 1);
+        padding-bottom: 40px;
+        > a {
+          @include mixin.dbg-border(blue, 2, 1);
+          display: inline-block;
+          margin-bottom: 40px;
+          margin-left: 46px;
+          color: variable.$color-gray;
+          font-size: 24px;
+
+          + ul a {
+            @include mixin.dbg-border(red, 2, 1);
+            display: inline-block;
+            margin-bottom: 20px;
+            margin-left: 66px;
+            white-space: pre; // 自動改行を無効
+            color: variable.$color-gray;
+            font-size: 20px;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+
+  } // &__content
+
+}
+
