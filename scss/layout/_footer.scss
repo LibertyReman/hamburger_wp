@@ -6,7 +6,7 @@
   width: 100%;
   height: 150px;
   padding-top: 16px;
-  background: no-repeat center/cover url("../../img/footerbg.jpg");
+  background: no-repeat center/cover url("../img/footerbg.jpg");
 
   &__info {
     @include mixin.dbg-border(red, 3, 1);

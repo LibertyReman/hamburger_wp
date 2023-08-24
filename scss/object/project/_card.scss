@@ -14,16 +14,16 @@
     @include mixin.dbg-border(red, 3, 1);
     height: 230px;
     width: 100%;
-    background: no-repeat left/cover url("../../img/card.jpg");
+    background: no-repeat left/cover url("../img/card.jpg");
 
     @include mixin.breakpoint("tablet") {
       height: auto;
       width: 50%;
-      background: no-repeat left/cover url("../../img/card-tablet.jpg");
+      background: no-repeat left/cover url("../img/card-tablet.jpg");
     }
 
     @include mixin.breakpoint("wide") {
-      background: no-repeat left/cover url("../../img/card-pc.jpg");
+      background: no-repeat left/cover url("../img/card-pc.jpg");
     }
   }
 

@@ -99,12 +99,12 @@
               </blockquote>
 
               <div class="p-sentence__img p-sentence__img--full">
-                <img src="img/single-burger1.jpg" alt="バーガー1">
+                <img src="./img/single-burger1.jpg" alt="バーガー1">
               </div>
 
               <div class="p-sentence__2rows">
                 <div>
-                  <img src="img/single-burger2.jpg" alt="バーガー2">
+                  <img src="./img/single-burger2.jpg" alt="バーガー2">
                 </div>
                 <p>テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります</p>
               </div>
@@ -112,24 +112,24 @@
               <div class="p-sentence__2rows">
                 <p>テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります</p>
                 <div>
-                  <img src="img/single-burger2.jpg" alt="バーガー2">
+                  <img src="./img/single-burger2.jpg" alt="バーガー2">
                 </div>
               </div>
 
               <div class="p-sentence__img">
-                <img src="img/single-burger2.jpg"alt="バーガー2">
+                <img src="./img/single-burger2.jpg"alt="バーガー2">
               </div>
 
               <div class="p-sentence__griditems">
-                <div><img src="img/single-burger2.jpg"alt="バーガー2"></div>
-                <div><img src="img/single-burger2.jpg"alt="バーガー2"></div>
-                <div><img src="img/single-burger2.jpg"alt="バーガー2"></div>
-                <div><img src="img/single-burger2.jpg"alt="バーガー2"></div>
-                <div><img src="img/single-burger2.jpg"alt="バーガー2"></div>
-                <div><img src="img/single-burger2.jpg"alt="バーガー2"></div>
-                <div><img src="img/single-burger2.jpg"alt="バーガー2"></div>
-                <div><img src="img/single-burger2.jpg"alt="バーガー2"></div>
-                <div><img src="img/single-burger2.jpg"alt="バーガー2"></div>
+                <div><img src="./img/single-burger2.jpg"alt="バーガー2"></div>
+                <div><img src="./img/single-burger2.jpg"alt="バーガー2"></div>
+                <div><img src="./img/single-burger2.jpg"alt="バーガー2"></div>
+                <div><img src="./img/single-burger2.jpg"alt="バーガー2"></div>
+                <div><img src="./img/single-burger2.jpg"alt="バーガー2"></div>
+                <div><img src="./img/single-burger2.jpg"alt="バーガー2"></div>
+                <div><img src="./img/single-burger2.jpg"alt="バーガー2"></div>
+                <div><img src="./img/single-burger2.jpg"alt="バーガー2"></div>
+                <div><img src="./img/single-burger2.jpg"alt="バーガー2"></div>
               </div>
 
               <ol>

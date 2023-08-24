@@ -14,7 +14,7 @@
   }
 
   &--img-takeout {
-    background: no-repeat center/cover url("../../img/takeout.jpg");
+    background: no-repeat center/cover url("../img/takeout.jpg");
 
     @include mixin.breakpoint("tablet") {
       margin-right: 4.79vw;
@@ -22,7 +22,7 @@
 
   }
   &--img-eatin {
-    background: no-repeat center/cover url("../../img/eatin.jpg");
+    background: no-repeat center/cover url("../img/eatin.jpg");
   }
 
   &__title {

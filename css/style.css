@@ -68,7 +68,7 @@ li {
   width: 100%;
   height: 150px;
   padding-top: 16px;
-  background: no-repeat center/cover url("../../img/footerbg.jpg");
+  background: no-repeat center/cover url("../img/footerbg.jpg");
 }
 .l-footer__info {
   display: flex;
@@ -250,7 +250,7 @@ li {
   border: 1px solid #707070;
   border-radius: 10px;
   background-color: #FFFFFF;
-  background-image: url("../../img/search.png");
+  background-image: url("../img/search.png");
   background-position: 9px center;
   background-size: 24px, 24px;
 }
@@ -280,68 +280,68 @@ li {
   justify-content: center;
   align-items: center;
   height: 285px;
-  background: no-repeat center/cover url("../../img/mainvisual-sp@2x.jpg");
+  background: no-repeat center/cover url("../img/mainvisual-sp@2x.jpg");
 }
 @media (min-width: 601px) {
   .p-mainvisual {
     flex-direction: row;
     justify-content: start;
-    background: no-repeat center/cover url("../../img/mainvisual-tablet.jpg");
+    background: no-repeat center/cover url("../img/mainvisual-tablet.jpg");
   }
 }
 @media (min-width: 1140px) {
   .p-mainvisual {
     height: 530px;
-    background: no-repeat center/cover url("../../img/mainvisual-pc.jpg");
+    background: no-repeat center/cover url("../img/mainvisual-pc.jpg");
   }
 }
 .p-mainvisual--img-archive {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/page-title_arcive@2x.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/page-title_arcive@2x.jpg");
 }
 @media (min-width: 601px) {
   .p-mainvisual--img-archive {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/page-title_arcive-tablet.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/page-title_arcive-tablet.jpg");
   }
 }
 @media (min-width: 1140px) {
   .p-mainvisual--img-archive {
     height: 239px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/page-title_arcive-pc.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/page-title_arcive-pc.jpg");
   }
 }
 .p-mainvisual--img-single {
   height: 225px;
-  background: no-repeat center/cover url("../../img/single.jpg");
+  background: no-repeat center/cover url("../img/single.jpg");
 }
 @media (min-width: 601px) {
   .p-mainvisual--img-single {
     height: 505px;
-    background: no-repeat center/cover url("../../img/single-tablet.jpg");
+    background: no-repeat center/cover url("../img/single-tablet.jpg");
   }
 }
 @media (min-width: 1140px) {
   .p-mainvisual--img-single {
     height: 500px;
-    background: no-repeat center/cover url("../../img/single-pc.jpg");
+    background: no-repeat center/cover url("../img/single-pc.jpg");
   }
 }
 .p-mainvisual--img-page {
   height: 225px;
-  background: no-repeat center/cover url("../../img/page.jpg");
+  background: no-repeat center/cover url("../img/page.jpg");
 }
 @media (min-width: 601px) {
   .p-mainvisual--img-page {
     height: 505px;
-    background: no-repeat center/cover url("../../img/page-tablet.jpg");
+    background: no-repeat center/cover url("../img/page-tablet.jpg");
   }
 }
 @media (min-width: 1140px) {
   .p-mainvisual--img-page {
     height: 500px;
-    background: no-repeat center/cover url("../../img/page-pc.jpg");
+    background: no-repeat center/cover url("../img/page-pc.jpg");
   }
 }
 .p-mainvisual__title {
@@ -381,7 +381,7 @@ li {
   }
 }
 .p-content--img-takeout {
-  background: no-repeat center/cover url("../../img/takeout.jpg");
+  background: no-repeat center/cover url("../img/takeout.jpg");
 }
 @media (min-width: 601px) {
   .p-content--img-takeout {
@@ -389,7 +389,7 @@ li {
   }
 }
 .p-content--img-eatin {
-  background: no-repeat center/cover url("../../img/eatin.jpg");
+  background: no-repeat center/cover url("../img/eatin.jpg");
 }
 .p-content__title {
   padding-top: 13px;
@@ -576,18 +576,18 @@ li {
 .p-card__img {
   height: 230px;
   width: 100%;
-  background: no-repeat left/cover url("../../img/card.jpg");
+  background: no-repeat left/cover url("../img/card.jpg");
 }
 @media (min-width: 601px) {
   .p-card__img {
     height: auto;
     width: 50%;
-    background: no-repeat left/cover url("../../img/card-tablet.jpg");
+    background: no-repeat left/cover url("../img/card-tablet.jpg");
   }
 }
 @media (min-width: 1140px) {
   .p-card__img {
-    background: no-repeat left/cover url("../../img/card-pc.jpg");
+    background: no-repeat left/cover url("../img/card-pc.jpg");
   }
 }
 .p-card__content {

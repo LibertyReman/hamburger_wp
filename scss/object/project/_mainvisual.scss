@@ -8,62 +8,62 @@
   justify-content: center; // ヨコ真ん中
   align-items: center; // タテ真ん中
   height: 285px;
-  background: no-repeat center/cover url("../../img/mainvisual-sp@2x.jpg");
+  background: no-repeat center/cover url("../img/mainvisual-sp@2x.jpg");
 
   @include mixin.breakpoint("tablet") {
     flex-direction: row; // タテ並び
     justify-content: start; // ヨコ真ん中
-    background: no-repeat center/cover url("../../img/mainvisual-tablet.jpg");
+    background: no-repeat center/cover url("../img/mainvisual-tablet.jpg");
   }
 
   @include mixin.breakpoint("wide") {
     height: 530px;
-    background: no-repeat center/cover url("../../img/mainvisual-pc.jpg");
+    background: no-repeat center/cover url("../img/mainvisual-pc.jpg");
   }
 
   &--img-archive {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../../img/page-title_arcive@2x.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/page-title_arcive@2x.jpg");
 
     @include mixin.breakpoint("tablet") {
-      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../../img/page-title_arcive-tablet.jpg");
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/page-title_arcive-tablet.jpg");
     }
 
     @include mixin.breakpoint("wide") {
       height: 239px;
-      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../../img/page-title_arcive-pc.jpg");
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/page-title_arcive-pc.jpg");
     }
   }
 
   &--img-single {
     height: 225px;
-    background: no-repeat center/cover url("../../img/single.jpg");
+    background: no-repeat center/cover url("../img/single.jpg");
 
     @include mixin.breakpoint("tablet") {
       height: 505px;
-      background: no-repeat center/cover url("../../img/single-tablet.jpg");
+      background: no-repeat center/cover url("../img/single-tablet.jpg");
     }
 
     @include mixin.breakpoint("wide") {
       height: 500px;
-      background: no-repeat center/cover url("../../img/single-pc.jpg");
+      background: no-repeat center/cover url("../img/single-pc.jpg");
     }
   }
 
   &--img-page {
     height: 225px;
-    background: no-repeat center/cover url("../../img/page.jpg");
+    background: no-repeat center/cover url("../img/page.jpg");
 
     @include mixin.breakpoint("tablet") {
       height: 505px;
-      background: no-repeat center/cover url("../../img/page-tablet.jpg");
+      background: no-repeat center/cover url("../img/page-tablet.jpg");
     }
 
     @include mixin.breakpoint("wide") {
       height: 500px;
-      background: no-repeat center/cover url("../../img/page-pc.jpg");
+      background: no-repeat center/cover url("../img/page-pc.jpg");
     }
   }
 
