@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="<?php language_attributes(); ?>"> <!-- 言語設定を自動的に出力 -->
   <head>
     <meta chaarset="utf-8">
     <meta name="viewport" content="width=width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/favicon.ico">
     <meta name="description" content="<?php bloginfo('description'); ?>">
-    <title>ハンバーガーサイト</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="./css/ress.css" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/common/ico/favicon.ico">
+    <?php wp_head(); ?> <!-- 必ず入れる プラグインや情報出力が機能しなくなってしまう -->
   </head>
 
   <body <?php body_class(); ?>> <!-- 表示するページの種類によってclassを付与 -->
