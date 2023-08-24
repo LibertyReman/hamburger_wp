@@ -212,17 +212,17 @@ li {
     font-size: 34px;
   }
 }
-.p-gmenu__content > ul > li {
+.p-gmenu__content > div ul > li:last-child {
   padding-bottom: 40px;
 }
-.p-gmenu__content > ul > li > a {
+.p-gmenu__content > div ul > li > a {
   display: inline-block;
   margin-bottom: 40px;
   margin-left: 46px;
   color: #707070;
   font-size: 24px;
 }
-.p-gmenu__content > ul > li > a + ul a {
+.p-gmenu__content > div ul > li > a + ul a {
   display: inline-block;
   margin-bottom: 20px;
   margin-left: 66px;

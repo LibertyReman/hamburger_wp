@@ -120,11 +120,14 @@ $clbtn-height: 5px;
       }
     }
 
-    > ul {
+    > div ul {
       @include mixin.dbg-border(black, 4, 0);
       > li {
         @include mixin.dbg-border(pink, 2, 1);
-        padding-bottom: 40px;
+        &:last-child {
+          padding-bottom: 40px;
+        }
+
         > a {
           @include mixin.dbg-border(blue, 2, 1);
           display: inline-block;
