@@ -4,7 +4,6 @@
     <meta chaarset="utf-8">
     <meta name="viewport" content="width=width=device-width, initial-scale=1.0">
     <meta name="description" content="<?php bloginfo('description'); ?>">
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/common/ico/favicon.ico">
     <?php wp_head(); ?> <!-- 必ず入れる プラグインや情報出力が機能しなくなってしまう -->
   </head>
 
