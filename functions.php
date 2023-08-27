@@ -2,6 +2,7 @@
   //テーマサポート
   add_theme_support('menus');       // メニューの追加
   add_theme_support('title-tag');   // タイトルタグのサポートを許可
+  add_theme_support('post-thumbnails'); // アイキャッチのサポートを追加
 
   //タイトル出力
   function hamburger_title($title) {
