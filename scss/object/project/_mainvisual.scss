@@ -39,16 +39,13 @@
 
   &--img-single {
     height: 225px;
-    background: no-repeat center/cover url("../img/single.jpg");
 
     @include mixin.breakpoint("tablet") {
       height: 505px;
-      background: no-repeat center/cover url("../img/single-tablet.jpg");
     }
 
     @include mixin.breakpoint("wide") {
       height: 500px;
-      background: no-repeat center/cover url("../img/single-pc.jpg");
     }
   }
 
