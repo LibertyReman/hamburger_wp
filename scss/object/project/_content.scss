@@ -47,7 +47,7 @@
       }
 
       @include mixin.breakpoint("wide") {
-        margin-bottom: 663px; // boxが大きくなった際の隙間を確保
+        margin-bottom: 450px; // boxが大きくなった際の隙間を確保
       }
     }
   }
