@@ -11,7 +11,7 @@
 
             <h2  class="p-gmenu__content__title">Menu</h2>
 
-            <?php wp_nav_menu(); ?>
+            <?php wp_nav_menu(); ?> <!-- ナビゲーションメニューの表示 -->
 
           </div> <!-- .p-gmenu__content -->
         </div> <!-- .p-gmenu -->
