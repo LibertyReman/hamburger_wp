@@ -20,7 +20,16 @@
                     <div class="p-card__img"><?php the_post_thumbnail(); ?></div> <!-- アイキャッチ画像を出力 -->
                     <div class="p-card__content">
                       <h3 class="p-card__content__title"><?php the_title(); ?></h3>
-                      <div class="p-card__content__text"><?php the_content('...'); ?></div>
+                      <div class="p-card__content__text">
+                        <?php
+                          if (mb_strlen($post->post_content, 'UTF-8') > 150) {
+                            $content = mb_substr(strip_tags($post->post_content), 0, 100, 'UTF-8');
+                            echo $content . '…';
+                          } else {
+                            echo strip_tags($post->post_content);
+                          }
+                        ?>
+                      </div>
                       <button onclick="location.href='<?php the_permalink(); ?>'" class="c-button p-card__content__button">詳しく見る</button>
                     </div>
                   </li>

@@ -52,17 +52,8 @@
     &__text {
       @include mixin.dbg-border(red, 3, 1);
       margin-bottom: 40px;
-
-      h2 {
-        @include mixin.dbg-border(blue, 3, 1);
-        margin-bottom: 7px;
-        font-size: 16px;
-      }
-
-      :not(h2) {
-        font-size: 16px;
-        font-weight: normal;
-      }
+      font-size: 16px;
+      font-weight: normal;
 
       @include mixin.breakpoint("wide") {
         margin-bottom: 60px;
