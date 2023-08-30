@@ -31,20 +31,22 @@
             </ul>
 
             <section class="p-pagenavigation"> <!-- flex row space-between ヨコ並び両端から均等に配置 -->
-              <p class="p-pagenavigation__info">page 1/10</p>
-              <a href="/" class="p-pagenavigation__prev">&lt;&lt; </a>
-              <ul class="p-pagenavigation__pages">
-                <li class="p-pagenavigation__pages__current"><a href="/">1</a></li>
-                <li><a href="/">2</a></li>
-                <li><a href="/">3</a></li>
-                <li><a href="/">4</a></li>
-                <li><a href="/">5</a></li>
-                <li><a href="/">6</a></li>
-                <li><a href="/">7</a></li>
-                <li><a href="/">8</a></li>
-                <li><a href="/">9</a></li>
-              </ul>
-              <a href="/" class="p-pagenavigation__next"> &gt;&gt;</a>
+              <?php
+                $current_pgae = get_query_var('paged');
+                $current_pgae = $current_pgae == 0 ? '1' : $current_pgae;
+                $max_pages = $wp_query->max_num_pages;
+                echo '<p class="p-pagenavigation__info">page '.$current_pgae .'/'.$max_pages .'</p>';
+              ?>
+
+              <?php the_posts_pagination(
+                array(
+                    'show_all'   => true, // 全てのページを表示
+                    'prev_next'  => true, // 「前へ」「次へ」のリンクを表示
+                    'prev_text'  => __( '&lt;&lt; '), // 「前へ」リンクのテキスト
+                    'next_text'  => __( ' &gt;&gt;'), // 「次へ」リンクのテキスト
+                    'type'       => 'list', // 戻り値の指定 (plain/list)
+                )
+              ); ?>
             </section>
 
           </div> <!-- .l-main__wrapper -->

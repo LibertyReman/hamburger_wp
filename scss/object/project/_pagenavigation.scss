@@ -3,22 +3,20 @@
 
 .p-pagenavigation {
   @include mixin.dbg-border(black, 3, 1);
-  display: flex;
-  justify-content: space-between; // 両端から均等に配置
-  align-items: center; // タテ真ん中
   padding: 35px 0 30px;
   color: variable.$color-gray;
   font-size: 16px;
   font-weight: normal;
 
   @include mixin.breakpoint("tablet") {
-    justify-content: center;
+    display: flex;
+    justify-content: center; // ヨコ真ん中
+    align-items: center; // タテ真ん中
   }
 
   &__info {
     @include mixin.dbg-border(black, 3, 1);
     display: none;
-    margin-right: 20px;
     font-weight: bold;
 
     @include mixin.breakpoint("tablet") {
@@ -26,63 +24,62 @@
     }
   }
 
-  &__prev {
+  ul {
     @include mixin.dbg-border(black, 3, 1);
-    &::after {
-      content: "前へ";
-
-      @include mixin.breakpoint("tablet") {
-        content: "";
-      }
-    }
-  }
-
-  &__next {
-    @include mixin.dbg-border(black, 3, 1);
-    &::before {
-      content: "次へ";
-
-      @include mixin.breakpoint("tablet") {
-        content: "";
-      }
-    }
-  }
-
-  &__pages {
-    @include mixin.dbg-border(black, 3, 1);
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; // タテ真ん中
     font-weight: bold;
-
-    @include mixin.breakpoint("tablet") {
-      display: flex;
-    }
 
     li {
       @include mixin.dbg-border(black, 3, 1);
       margin-right: 15px;
-      border: 1px solid variable.$color-gray;
 
       &:first-child {
         margin-left: 15px;
       }
 
-      a {
-        @include mixin.dbg-border(yellow, 5, 1);
-        display: flex;
-        justify-content: center; // ヨコ真ん中
-        align-items: center; // タテ真ん中
-        width: 35px;
-        height: 35px;
-      }
-    }
+      :not(.prev, .next) {
+        display: none;
 
-    &__current {
-      @include mixin.breakpoint("tablet") {
+        @include mixin.breakpoint("tablet") {
+          display: flex;
+          justify-content: center; // ヨコ真ん中
+          align-items: center; // タテ真ん中
+          width: 35px;
+          height: 35px;
+          border: 1px solid variable.$color-gray;
+        }
+      }
+
+      .current {
         background-color: variable.$color-gray;
         color:  variable.$color-white;
       }
-    }
-  }
 
+      .prev {
+        @include mixin.dbg-border(black, 3, 1);
+        &::after {
+          content: "前へ";
+
+          @include mixin.breakpoint("tablet") {
+            content: "";
+          }
+        }
+      }
+
+      .next {
+        @include mixin.dbg-border(black, 3, 1);
+        &::before {
+          content: "次へ";
+
+          @include mixin.breakpoint("tablet") {
+            content: "";
+          }
+        }
+      }
+
+    } // li
+  } // ul
 }
 
