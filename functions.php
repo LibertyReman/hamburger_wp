@@ -1,8 +1,14 @@
 <?php
   //テーマサポート
-  add_theme_support('menus');       // メニューの追加
   add_theme_support('title-tag');   // タイトルタグのサポートを許可
   add_theme_support('post-thumbnails'); // アイキャッチのサポートを追加
+  add_theme_support('automatic-feed-links'); // フィードの有効化
+
+  // メニューの追加
+  register_nav_menus(array(
+    'menu_nav' => 'menu navigation',
+    'fixed_nav' => 'fixed page navigation',
+  ));
 
   //タイトル出力
   function hamburger_title($title) {
