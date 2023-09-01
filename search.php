@@ -3,7 +3,7 @@
         <article>
           <div class="p-mainvisual p-mainvisual--img-archive"> <!-- flex column center center タテヨコ真ん中 -->
             <h1 class="p-mainvisual__title">Search:</h1>
-            <p class="p-mainvisual__subtitle"><?php echo get_search_query(); ?></p>
+            <p class="p-mainvisual__subtitle"><?php the_search_query(); ?></p> <!-- 検索キーワードを表示 -->
           </div>
 
           <div class="l-main__wrapper">
@@ -22,11 +22,13 @@
                       <h3 class="p-card__content__title"><?php the_title(); ?></h3>
                       <div class="p-card__content__text">
                         <?php
-                          if (mb_strlen($post->post_content, 'UTF-8') > 200) {
-                            $content = mb_substr(strip_tags($post->post_content), 0, 200, 'UTF-8');
+                          $content = strip_tags($post->post_content);
+                          $max_strlen = 150;
+                          if (mb_strlen($content, 'UTF-8') > $max_strlen) {
+                            $content = mb_substr($content, 0, $max_strlen, 'UTF-8');
                             echo $content . '…';
                           } else {
-                            echo strip_tags($post->post_content);
+                            echo $content;
                           }
                         ?>
                       </div>
