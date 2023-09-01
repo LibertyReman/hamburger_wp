@@ -8,31 +8,35 @@
           <div class="l-main__wrapper">
             <ul class="l-main__wrapper__flex"> <!-- flex column/row -->
               <li class="p-content p-content--img-takeout"> <!-- flex column space-between タテ並び両端から均等に配置 -->
-                <h2 class="p-content__title">Take Out</h2>
-                <div class="p-content__boxes">
-                  <dl class="p-content__box">
-                    <dt class="p-content__box__title">Take OUT</dt>
-                    <dd class="p-content__box__text">当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</dd>
-                  </dl>
-                  <dl class="p-content__box">
-                    <dt class="p-content__box__title">Take OUT</dt>
-                    <dd class="p-content__box__text">当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</dd>
-                  </dl>
-                </div>
+                <a href="<?php echo esc_url(home_url('/category/takeout')); ?>">
+                  <h2 class="p-content__title">Take Out</h2>
+                  <div class="p-content__boxes">
+                    <dl class="p-content__box">
+                      <dt class="p-content__box__title">Take OUT</dt>
+                      <dd class="p-content__box__text">当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</dd>
+                    </dl>
+                    <dl class="p-content__box">
+                      <dt class="p-content__box__title">Take OUT</dt>
+                      <dd class="p-content__box__text">当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</dd>
+                    </dl>
+                  </div>
+                </a>
               </li>
 
               <li class="p-content p-content--img-eatin"> <!-- flex column space-between タテ並び両端から均等に配置 -->
-                <h2 class="p-content__title">Eat In</h2>
-                <div class="p-content__boxes">
-                  <dl class="p-content__box">
-                    <dt class="p-content__box__title">Eat In</dt>
-                    <dd class="p-content__box__text">店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです</dd>
-                  </dl>
-                  <dl class="p-content__box">
-                    <dt class="p-content__box__title">Eat In</dt>
-                    <dd class="p-content__box__text">店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです</dd>
-                  </dl>
-                </div>
+                <a href="<?php echo esc_url(home_url('/category/eatin')); ?>">
+                  <h2 class="p-content__title">Eat In</h2>
+                  <div class="p-content__boxes">
+                    <dl class="p-content__box">
+                      <dt class="p-content__box__title">Eat In</dt>
+                      <dd class="p-content__box__text">店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです</dd>
+                    </dl>
+                    <dl class="p-content__box">
+                      <dt class="p-content__box__title">Eat In</dt>
+                      <dd class="p-content__box__text">店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです</dd>
+                    </dl>
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
