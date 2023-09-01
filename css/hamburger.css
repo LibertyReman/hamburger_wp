@@ -70,7 +70,7 @@ li {
   padding-top: 16px;
   background: no-repeat center/cover url("../img/footerbg.jpg");
 }
-.l-footer__info {
+.l-footer ul {
   display: flex;
   justify-content: center;
   margin-bottom: 70px;
@@ -78,11 +78,11 @@ li {
   font-size: 18px;
   font-weight: normal;
 }
-.l-footer__info li + li {
+.l-footer ul li + li {
   position: relative;
   padding-left: 20px;
 }
-.l-footer__info li + li::before {
+.l-footer ul li + li::before {
   display: block;
   position: absolute;
   content: "";

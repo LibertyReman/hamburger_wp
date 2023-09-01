@@ -8,7 +8,7 @@
   padding-top: 16px;
   background: no-repeat center/cover url("../img/footerbg.jpg");
 
-  &__info {
+  ul {
     @include mixin.dbg-border(red, 3, 1);
     display: flex;
     justify-content: center; // 真ん中
