@@ -1,0 +1,25 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+
+.p-error {
+  @include mixin.dbg-border(green, 3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin: 40px 0 10px;
+    color: variable.$color-black;
+    font-size: 80px;
+  }
+
+  &__text {
+    color: variable.$color-black;
+    font-size: 24px;
+  }
+
+}
+
+
+
