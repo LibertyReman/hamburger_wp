@@ -3,9 +3,6 @@
 
 .p-content {
   @include mixin.dbg-border(yellow, 6, 1);
-  display: flex;
-  flex-direction: column; // タテ並び
-  justify-content: space-between; // 両端から均等に配置
   margin-bottom: 20px;
   width: 100%;
 
@@ -19,8 +16,8 @@
     @include mixin.breakpoint("tablet") {
       margin-right: 4.79vw;
     }
-
   }
+
   &--img-eatin {
     background: no-repeat center/cover url("../img/eatin.jpg");
   }

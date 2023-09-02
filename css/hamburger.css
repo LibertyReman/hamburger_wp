@@ -110,6 +110,15 @@ li {
   cursor: pointer;
 }
 
+.c-flex {
+  display: flex;
+}
+.c-flex--column-spacebetween {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
 .p-gmenu {
   display: flex;
   justify-content: flex-end;
@@ -366,9 +375,6 @@ li {
 }
 
 .p-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin-bottom: 20px;
   width: 100%;
 }
