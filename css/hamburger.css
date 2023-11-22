@@ -592,6 +592,7 @@ li {
   }
 }
 .p-card__content {
+  position: relative;
   width: 100%;
   padding: 32px 4.53vw 43px;
   background-color: #3C2B1C;
@@ -601,6 +602,18 @@ li {
     height: auto;
     width: 50%;
   }
+}
+.p-card__content__mark-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55px;
+  height: 55px;
+  background-color: #FF8A00;
+  font-size: 18px;
 }
 .p-card__content__title {
   margin-bottom: 21px;

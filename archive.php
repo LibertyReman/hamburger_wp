@@ -19,6 +19,15 @@
                   <li class="p-card">
                     <div class="p-card__img"><?php the_post_thumbnail(); ?></div> <!-- アイキャッチ画像を出力 -->
                     <div class="p-card__content">
+                      <?php
+                        $days = 14;
+                        $today = date_i18n('U');  // 現在の時間
+                        $post_day = get_the_time('U');  // 投稿日の時間
+                        $term = date('U',($today - $post_day)) / 86400;
+                        if( $days > $term ){
+                          echo '<span class="p-card__content__mark-new">NEW</span>';
+                        }
+                      ?>
                       <h3 class="p-card__content__title"><?php the_title(); ?></h3>
                       <div class="p-card__content__text">
                         <?php

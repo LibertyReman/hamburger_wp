@@ -30,6 +30,7 @@
 
   &__content {
     @include mixin.dbg-border(pink, 5, 1);
+    position: relative;
     width: 100%;
     padding: 32px 4.53vw 43px;
     background-color: variable.$color-darkorange;
@@ -37,6 +38,20 @@
     @include mixin.breakpoint("tablet") {
       height: auto;
       width: 50%;
+    }
+
+    &__mark-new {
+      @include mixin.dbg-border(pink, 3, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 55px;
+      height: 55px;
+      background-color: variable.$color-orange;
+      font-size: 18px;
     }
 
     &__title {
