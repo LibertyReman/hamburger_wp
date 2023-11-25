@@ -566,6 +566,9 @@ li {
   height: 100%;
   object-fit: cover;
 }
+.p-sentence__suggest a {
+  text-decoration: underline;
+}
 
 .p-card {
   margin: 25px 0;
