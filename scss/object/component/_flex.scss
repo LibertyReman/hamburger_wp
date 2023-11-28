@@ -7,6 +7,11 @@
     justify-content: space-between; // 両端から均等に配置
     height: 100%;
   }
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
 }
 
 

@@ -12,24 +12,31 @@
                   <div class="p-sentence">
                     <?php the_content(); ?> <!-- 本文の出力 -->
                     <?php wp_link_pages(); ?> <!--  ページ送りの出力 -->
-                    <div class="p-sentence__suggest">
-                      <h2><i class="fas fa-star"></i> おすすめ情報</h2>
-                      <?php 
-                        $suggest_link = get_post_meta($post->ID, 'suggest_link', true);
-                        $suggest_title = get_post_meta($post->ID, 'suggest_title', true);
-                        if($suggest_title and $suggest_link) : // おすすめタイトルとリンクがある場合
-                          echo '<a href="', esc_url($suggest_link), '">', esc_html($suggest_title), '</a>';
-                        elseif($suggest_title and $suggest_link = " ") : // おすすめタイトルのみある場合
-                          echo '<p>', esc_html($suggest_title), '</p>';
-                        else :
-                          $category = get_the_category();
-                          $link = $category[2]->term_id ? $category[2]->term_id :  $category[0]->term_id;
-                          echo '<a href="', get_category_link($link), '">ブログのトップページへ</a>';
-                        endif;
-                      ?>
-                    </div>
-                  </div>
-                </div>
+                  </div> <!-- .p-sentence -->
+
+                  <div class="p-suggest">
+                    <h2 class="p-suggest__title"><i class="fas fa-star"></i> おすすめ情報</h2>
+                    <?php
+                      $suggest_link = get_post_meta($post->ID, 'suggest_link', true);
+                      $suggest_title = get_post_meta($post->ID, 'suggest_title', true);
+                      if($suggest_title and $suggest_link) : // おすすめタイトルとリンクがある場合
+                        echo '<a class="p-suggest__text-link" href="', esc_url($suggest_link), '">', esc_html($suggest_title), '</a>';
+                      elseif($suggest_title and $suggest_link = " ") : // おすすめタイトルのみある場合
+                        echo '<p class="p-suggest__text">', esc_html($suggest_title), '</p>';
+                      else :
+                        $category = get_the_category();
+                        $link = $category[2]->term_id ? $category[2]->term_id :  $category[0]->term_id;
+                        echo '<a class="p-suggest__text-link" href="', get_category_link($link), '">ブログのトップページへ</a>';
+                      endif;
+                    ?>
+
+                    <?php
+                      if (function_exists('yarpp_related')) {
+                        related_posts(); // 関連記事の表示
+                      }
+                    ?>
+                  </div> <!-- .p-suggest -->
+                </div> <!-- .l-main__wrapper -->
               </div> <!-- post_class() -->
             <?php endwhile;
           else : // 投稿データがない場合 ?>
