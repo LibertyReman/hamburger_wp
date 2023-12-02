@@ -3,7 +3,7 @@
         <article>
           <div class="p-mainvisual p-mainvisual--img-archive"> <!-- flex column center center タテヨコ真ん中 -->
             <h1 class="p-mainvisual__title">Menu:</h1>
-            <p class="p-mainvisual__subtitle"><?php single_cat_title(); ?></p> <!-- カテゴリー名を表示 -->
+            <p class="p-mainvisual__subtitle"><?php echo single_cat_title('', false), "（", get_postno_from_archive(), "件）"; ?></p> <!-- カテゴリー名を表示 -->
           </div>
 
           <div class="l-main__wrapper">

@@ -69,4 +69,9 @@
   add_action( 'save_post', 'save_custom_fields' );
 
 
+  // アーカイブページに属する記事数を取得
+  function get_postno_from_archive() {
+    $term = get_queried_object();
+    echo $term->count;
+  }
 
