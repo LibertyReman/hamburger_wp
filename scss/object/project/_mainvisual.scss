@@ -64,6 +64,23 @@
     }
   }
 
+  &--img-news {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 225px;
+    background: no-repeat center/cover url("../img/news.jpg");
+
+    @include mixin.breakpoint("tablet") {
+      height: 505px;
+      background: no-repeat center/cover url("../img/news@2x.jpg");
+    }
+
+    @include mixin.breakpoint("wide") {
+      height: 500px;
+    }
+  }
+
   &__title {
     @include mixin.dbg-border(blue, 3, 1);
     margin-right: auto;
@@ -78,6 +95,45 @@
 
   }
 
+  &__cat {
+    @include mixin.dbg-border(yellow, 3, 1);
+    margin: 10px auto 10px 6.66vw;
+    color: variable.$color-white;
+    font-size: 12px;
+    font-weight: normal;
+
+    @include mixin.breakpoint("tablet") {
+      margin-right: 0;
+      margin-left: 86px;
+    }
+
+    a:not(:last-of-type)::after {
+      white-space: pre-wrap;
+      content: ",   ";
+    }
+  }
+
+  &__tag {
+    margin-right: auto;
+    margin-left: 6.66vw;
+
+    @include mixin.breakpoint("tablet") {
+      margin-right: 0;
+      margin-left: 86px;
+    }
+
+    a {
+      @include mixin.dbg-border(yellow, 3, 1);
+      display: inline-block;
+      margin-right: 10px;
+      padding: 5px 20px;
+      border-radius: 20px;
+      background-color: variable.$color-lightgray2;
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+
   &__subtitle {
     @include mixin.dbg-border(red, 3, 1);
     margin-top: 12px;
@@ -88,7 +144,6 @@
     @include mixin.breakpoint("tablet") {
       margin: 6px auto 0 19px;
     }
-
   }
 
 }
