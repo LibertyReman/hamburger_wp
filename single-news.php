@@ -6,22 +6,22 @@
               <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>> <!-- 投稿情報classを追加 -->
                 <div class="p-mainvisual p-mainvisual--img-news" >
                   <h1 class="p-mainvisual__title"><?php the_title(); ?></h1>
-                  <p class="p-mainvisual__cat">
+                  <div class="p-mainvisual__cat">
                     <?php
                       $terms = get_the_terms($post->ID, 'news-cat');
                       foreach($terms as $term) {
                         echo '<a href="', get_term_link($term), '">', $term->name, '（', $term->count, '）</a>';
                       }
                     ?>
-                  </P>
-                  <p class="p-mainvisual__tag">
+                  </div>
+                  <div class="p-mainvisual__tag">
                     <?php
                       $terms = get_the_terms($post->ID, 'news-tag');
                       foreach($terms as $term) {
                         echo '<a href="', get_term_link($term), '">', $term->name, '（', $term->count, '）</a>';
                       }
                     ?>
-                  </P>
+                  </div>
                 </div>
 
                 <div class="l-main__wrapper">

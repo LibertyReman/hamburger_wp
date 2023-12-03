@@ -28,8 +28,8 @@
                         }
                       ?>
                       <h3 class="p-card__content__title"><?php the_title(); ?></h3>
-                      <p class="p-card__content__cat"><?php echo get_the_term_list($post->ID, 'news-cat', '', ',&nbsp&nbsp'); ?></P>
-                      <p class="p-card__content__tag"><?php echo get_the_term_list($post->ID, 'news-tag'); ?></P>
+                      <div class="p-card__content__cat"><?php echo get_the_term_list($post->ID, 'news-cat', '', ',&nbsp&nbsp'); ?></div>
+                      <div class="p-card__content__tag"><?php echo get_the_term_list($post->ID, 'news-tag'); ?></div>
                       <div class="p-card__content__text">
                         <?php
                           $content = strip_tags($post->post_content);
